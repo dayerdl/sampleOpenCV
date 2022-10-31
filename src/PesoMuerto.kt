@@ -68,8 +68,6 @@ object PesoMuerto : Application() {
             i += 1
         } // of main while()
 
-        playURL(URL("file:$url"))
-
         capture.release()
         writer.release()
 
@@ -77,21 +75,7 @@ object PesoMuerto : Application() {
 
     }
 
-    private fun playURL(mediaUrl: URL){
-        val mediaTest = JFrame("Movie Player")
-        mediaTest.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-        val mediaPanel = MediaPlayerStandard(mediaUrl)
-        mediaTest.add(mediaPanel)
-        mediaTest.setSize(800, 700) // set the size of the player
-        mediaTest.setLocationRelativeTo(null)
-        mediaTest.isVisible = true
-    }
-    
     fun playVideo3(stage: Stage?) {
-        // TODO Auto-generated method stub
-        //Initialising path of the media file, replace this with your file path
-        // TODO Auto-generated method stub
-        //Initialising path of the media file, replace this with your file path
         val path = "/Users/davidlopez.dayer/SampleOpenCV/src/video_out.mp4"
 
         //Instantiating Media class
@@ -118,12 +102,14 @@ object PesoMuerto : Application() {
 
         //setting group and scene
         val root = Group()
-        root.getChildren().add(mediaView)
+        root.children.add(mediaView)
         val scene = Scene(root, 500.0, 1400.0)
 
-        stage!!.setScene(scene)
-        stage!!.setTitle("Playing video")
-        stage!!.show()
+        stage?.apply {
+            setScene(scene)
+            title = "Playing video"
+            show()
+        }
     }
 
     private fun drawBoxesOnTheImage(img: Mat){

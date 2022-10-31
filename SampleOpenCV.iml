@@ -7,23 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/opencv/4.6.0_1/share/java/opencv4/opencv-460.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <NATIVE>
-          <root url="file:///opt/homebrew/Cellar/opencv/4.6.0_1/share/java/opencv4" />
-        </NATIVE>
-        <SOURCES>
-          <root url="jar:///opt/homebrew/Cellar/opencv/4.6.0_1/share/java/opencv4/opencv-460.jar!/" />
-          <root url="jar:///opt/homebrew/Cellar/opencv/4.6.0_1/share/java/opencv4/opencv-460.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-    <orderEntry type="library" name="jmf" level="project" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="opencv-460" level="project" />
   </component>
 </module>
